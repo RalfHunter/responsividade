@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 
-.menu > li > a{
+.menu>li>a {
   display: none;
   transition: 0.5s;
 }
-.menu  {
+
+.menu {
   background-color: blue;
   display: flex;
   flex-direction: column;
@@ -23,29 +24,33 @@
   flex: 1;
   transition: 2s;
 }
+
 .menu img:hover {
-    cursor: pointer;
-    filter: invert(100%);
-    transition: 0.5s;
-  }
-.menu.active > li > a{
+  cursor: pointer;
+  filter: invert(100%);
   transition: 0.5s;
-  display:block;
-  color:  black;
+}
+
+.menu.active>li>a {
+  transition: 0.5s;
+  display: block;
+  color: black;
   text-decoration: none;
   width: 100%;
 }
 
 
-.menu.active > li {
+.menu.active>li {
   padding: 5px;
   width: 100%;
   transition: 0.5s;
 }
-.menu.active > li:hover{
+
+.menu.active>li:hover {
   background-color: rgb(62, 62, 228);
 }
-.menu.active > li:hover a {
+
+.menu.active>li:hover a {
   color: white;
 }
 
@@ -56,47 +61,93 @@
   justify-content: space-between;
 }
 
-footer{
+footer {
   display: flex;
   flex-direction: column;
+
   width: 100%;
 }
 
-footer .part1{
-  display: flex;
-  justify-content: center;
-  align-items:start;
-  gap: 200px;
-}
-footer .part1 div{
+footer .part1 {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  border-left: 2px dotted black;
-  padding: 0 5px 0 10px;
-}
-footer .part1 div > a {
-  font-size:  .9em;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  background-color: #00420c;
+  color: white;
+  padding: 20px;
+  /* flex-wrap: wrap; */
 }
 
-@media (min-width: 768px) {
-  .menu, .menu.active{
+footer .part1 div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 1px dotted white;
+  padding: 0 5px 15px 10px;
+}
+
+footer .part1 div>a {
+  font-size: .9em;
+}
+
+footer .part1 div>h2 {
+  font-size: 20px;
+  color: #61b06f;
+}
+
+footer .part2 {
+  display: flex;
+  justify-content: center;
+  background-color: #002907;
+  padding: 20px;
+}
+
+footer .part2 div {
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+}
+
+
+footer .part3 {
+  display: flex;
+  justify-content: center;
+}
+
+footer .part3 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+
+@media (min-width: 980px) {
+
+  .menu,
+  .menu.active {
     display: flex;
     flex-direction: row;
     background-color: blueviolet;
   }
-  .menu img{
+
+  .menu img {
     display: none;
   }
-  
-  .menu>li, .menu.active>li{
+
+  .menu>li,
+  .menu.active>li {
     list-style: none;
-    width:auto;
+    width: auto;
     padding: 0px;
 
   }
 
-  .menu>li>a, .menu.active>li>a{
+  .menu>li>a,
+  .menu.active>li>a {
     text-decoration: none;
     color: white;
     display: block;
@@ -105,9 +156,71 @@ footer .part1 div > a {
     margin: none;
     padding: none;
   }
-  .menu>li>a:hover, .menu.active > li>a:hover{
+
+  .menu>li>a:hover,
+  .menu.active>li>a:hover {
     background-color: rgb(62, 62, 228);
     color: black
-}
+  }
+  footer {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
 }
 
+footer .part1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 200px;
+  background-color: #00420c;
+  color: white;
+  padding: 20px;
+}
+
+footer .part1 div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 1px dotted white;
+  padding: 0 5px 15px 10px;
+}
+
+footer .part1 div>a {
+  font-size: .9em;
+}
+
+footer .part1 div>h2 {
+  font-size: 20px;
+  color: #61b06f;
+}
+
+footer .part2 {
+  display: flex;
+  justify-content: center;
+  background-color: #002907;
+  padding: 20px;
+}
+
+footer .part2 div {
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+}
+
+
+footer .part3 {
+  display: flex;
+  justify-content: center;
+}
+
+footer .part3 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+}
